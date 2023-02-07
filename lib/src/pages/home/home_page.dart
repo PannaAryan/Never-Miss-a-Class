@@ -11,10 +11,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Group Chat App"),
-      ), //AppBar
-      body: Container(),
-    );
+        appBar: AppBar(
+          title: const Text("Group Chat App"),
+        ),
+        body: Center(
+          child: TextButton(
+            onPressed: () {
+              print("Pressed? You sure?");
+            },
+            child: const Text(
+              "initiate group chat",
+              style: TextStyle(
+                color: Colors.teal,
+                fontSize: 16,
+              ),
+            ),
+          ),
+        ));
   }
 }
