@@ -10,6 +10,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  TextEditingController nameController = TextEditingController();
+
+  final formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,10 +26,22 @@ class _HomePageState extends State<HomePage> {
                 context: context,
                 builder: (BuildContext context) => AlertDialog(
                       title: const Text("Please enter your name"),
-                      content: TextFormField(),
+                      content: Form(
+                        key: formKey,
+                        child: TextFormField(
+                          controller: nameController,
+                          validator: (value) {
+                            if (value == null || value.length < 3) {
+                              return "User must enter a proper name";
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
                       actions: [
                         TextButton(
                           onPressed: () {
+                            nameController.clear();
                             Navigator.pop(context);
                           },
                           child: const Text(
@@ -38,12 +54,19 @@ class _HomePageState extends State<HomePage> {
                         ),
                         TextButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => GroupPage(),
-                              ),
-                            );
+                            if (formKey.currentState!.validate()) {
+                              String name = nameController.text;
+                              nameController.clear();
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => GroupPage(
+                                    name: name,
+                                  ),
+                                ),
+                              );
+                            }
                           },
                           child: const Text(
                             "Enter",
