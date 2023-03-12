@@ -1,19 +1,37 @@
----
+### Chat App Development Front-End and Back-End using Flutter, SocketIo, and NodeJS.
 
-# Never Miss A Class!
+<a href="https://www.buymeacoffee.com/DevStack06" target="_blank"  align="center">
+    <p  align="center">
+        <br>
+   <img   src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174">
+   </p>
+</a>
+<br>
+<img src= "https://github.com/DevStack06/images/blob/master/ChatImages/chatapp.png" >
+<br>
 
-#### An open-source cross-platform app that updates you on your class time daily. 
-#### Didn't check the notification? Receive a call exactly one hour before class!
+### Playlist for Chat App Development series -:
 
----
+| Playlist Name                                               |     | YouTube Playlist Link                                                        |
+| ----------------------------------------------------------- | --- | ---------------------------------------------------------------------------- |
+| Chat App Development (Main Playlist)                        |     | [Link](https://youtube.com/playlist?list=PLtIU0BH0pkKovuEaNsrGE_Xd5Tz3m1zeC) |
+| Chat App Development (Only Front-End using Flutter)         |     | [Link](https://youtube.com/playlist?list=PLtIU0BH0pkKrgqaT-9JSrRRyetkVEkDn6) |
+| Chat Server Development (Only Back-End using Node/SocketIo) |     | [Link](https://youtube.com/playlist?list=PLtIU0BH0pkKqKm88PUSRWiKsZ50ztsITv) |
 
-## Getting Started
-Download the repo, use "*flutter run*" to test the app.
+<br>
 
+### **_If this tutorial helped you please give a star and also fork the repo, Thank you happy coding :)_**
 
-Resources :
+### To use this app follow below instructions-:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-- [online documentation](https://docs.flutter.dev/)
-- [flutter dev - learn](https://flutter.dev/learn)
+1. Clone this app using below syntax -:
+
+   > git clone https://github.com/DevStack06/Chat-Server.git
+
+2. After cloning install packages using below syntax -:
+   > npm install
+
+Above command will install all the neccery packges.
+
+3. Run the app on your mobile using below command -:
+   > npm run dev
